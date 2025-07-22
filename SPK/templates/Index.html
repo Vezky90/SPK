@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPK - SAW</title>
+  </head>
+  <body>
+    <h2>Simple Additive Weighting</h2>
+    <p>Klik tombol untuk menghitung hasil SPK</p>
+    <form action="/result" method="post">
+      <button type="submit">Hitung</button>
+    </form>
+
+    <h3>Data Alternatif</h3>
+    <table border="1">
+      <tr>
+        <th>Alternatif</th>
+        <th>Kriteria 1</th>
+        <th>Kriteria 2</th>
+        <th>Kriteria 3</th>
+      </tr>
+      {% for alt, values in alternatives.items() %}
+      <tr>
+        <td>{{ alt }}</td>
+        {% for v in values %}
+        <td>{{ v }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

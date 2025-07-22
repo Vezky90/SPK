@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hasil SPK</title>
+  </head>
+  <body>
+    <h2>Hasil Perhitungan SAW</h2>
+    <table border="1">
+      <tr>
+        <th>Alternatif</th>
+        <th>Skor Akhir</th>
+      </tr>
+      {% for alt, score in scores.items() %}
+      <tr>
+        <td>{{ alt }}</td>
+        <td>{{ score }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h3>Grafik</h3>
+    <img src="{{ image_path }}" width="500" />
+
+    <br /><br />
+    <a href="/">← Kembali</a>
+  </body>
+</html>
